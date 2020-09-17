@@ -26,7 +26,7 @@
           </nav>
 
           <div class="header--signin">
-            <a href="#">
+            <a href="#enter" class="popup--link">
               <img src="images/user.png" alt="user-icon" />
               Вход
             </a>
@@ -44,7 +44,7 @@
             <span>+380 98 170 00 740</span>
             <span>+380 98 170 00 740</span>
             <div class="call-me">
-              <a href="#">
+              <a href="#recall" class="popup--link">
                 <img src="images/phone.png" alt="user-icon" />
                 Перезвонить мне
               </a>
@@ -137,80 +137,186 @@
 
             <form action="#">
               <div class="filters--tabs">
-                <a href="##" class="filters--tabs-btn">Tab 1</a>
-                <a href="##" class="filters--tabs-btn active">Tab 2</a>
+                <a href="##" id="tab-1" class="filters--tabs-btn">Tab 1</a>
+                <a href="##" id="tab-2" class="filters--tabs-btn active"
+                  >Tab 2</a
+                >
               </div>
               <div class="filters--selects">
-                <div class="filters--selects-row">
-                  <div class="select">
-                    <div class="select--header">
-                      <span class="select--current">Select 1</span>
-                      <div class="select--icon">&#9660;</div>
-                    </div>
+                <div
+                  id="select-tab-1"
+                  class="filters--selects-tab"
+                  style="display: none"
+                >
+                  <div class="filters--selects-row">
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 1</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
 
-                    <div class="select--body">
-                      <div class="select--item">Select 1</div>
-                      <div class="select--item">Select 2</div>
-                      <div class="select--item">Select 3</div>
+                      <div class="select--body">
+                        <div class="select--item">Select 1</div>
+                        <div class="select--item">Select 2</div>
+                        <div class="select--item">Select 3</div>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 2</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
+
+                      <div class="select--body">
+                        <div class="select--item">Select 2</div>
+                        <div class="select--item">Select 3</div>
+                        <div class="select--item">Select 4</div>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 3</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
+
+                      <div class="select--body">
+                        <div class="select--item">Select 3</div>
+                        <div class="select--item">Select 4</div>
+                        <div class="select--item">Select 5</div>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 4</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
+
+                      <div class="select--body">
+                        <div class="select--item">Select 4</div>
+                        <div class="select--item">Select 5</div>
+                        <div class="select--item">Select 6</div>
+                      </div>
                     </div>
                   </div>
-                  <div class="select">
-                    <div class="select--header">
-                      <span class="select--current">Select 2</span>
-                      <div class="select--icon">&#9660;</div>
-                    </div>
 
-                    <div class="select--body">
-                      <div class="select--item">Select 2</div>
-                      <div class="select--item">Select 3</div>
-                      <div class="select--item">Select 4</div>
-                    </div>
-                  </div>
-                  <div class="select">
-                    <div class="select--header">
-                      <span class="select--current">Select 3</span>
-                      <div class="select--icon">&#9660;</div>
-                    </div>
+                  <div class="filters--selects-row">
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 5</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
 
-                    <div class="select--body">
-                      <div class="select--item">Select 3</div>
-                      <div class="select--item">Select 4</div>
-                      <div class="select--item">Select 5</div>
+                      <div class="select--body">
+                        <div class="select--item">Select 5</div>
+                        <div class="select--item">Select 6</div>
+                        <div class="select--item">Select 7</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="select">
-                    <div class="select--header">
-                      <span class="select--current">Select 4</span>
-                      <div class="select--icon">&#9660;</div>
-                    </div>
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 6</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
 
-                    <div class="select--body">
-                      <div class="select--item">Select 4</div>
-                      <div class="select--item">Select 5</div>
-                      <div class="select--item">Select 6</div>
+                      <div class="select--body">
+                        <div class="select--item">Select 6</div>
+                        <div class="select--item">Select 7</div>
+                        <div class="select--item">Select 8</div>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 7</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
+
+                      <div class="select--body">
+                        <div class="select--item">Select 7</div>
+                        <div class="select--item">Select 8</div>
+                        <div class="select--item">Select 9</div>
+                      </div>
+                    </div>
+                    <span>Цена</span>
+                    <div class="input-wrap">
+                      <input type="number" placeholder="50" />
+                    </div>
+                    <div class="input-wrap">
+                      <input type="number" placeholder="250000" />
                     </div>
                   </div>
                 </div>
+                <div id="select-tab-2" class="filters--selects-tab">
+                  <div class="filters--selects-row">
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 1</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
 
-                <div class="filters--selects-row">
-                  <div class="select">
-                    <div class="select--header">
-                      <span class="select--current">Select 4</span>
-                      <div class="select--icon">&#9660;</div>
+                      <div class="select--body">
+                        <div class="select--item">Select 1</div>
+                        <div class="select--item">Select 2</div>
+                        <div class="select--item">Select 3</div>
+                      </div>
                     </div>
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 2</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
 
-                    <div class="select--body">
-                      <div class="select--item">Select 4</div>
-                      <div class="select--item">Select 5</div>
-                      <div class="select--item">Select 6</div>
+                      <div class="select--body">
+                        <div class="select--item">Select 2</div>
+                        <div class="select--item">Select 3</div>
+                        <div class="select--item">Select 4</div>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 3</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
+
+                      <div class="select--body">
+                        <div class="select--item">Select 3</div>
+                        <div class="select--item">Select 4</div>
+                        <div class="select--item">Select 5</div>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 4</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
+
+                      <div class="select--body">
+                        <div class="select--item">Select 4</div>
+                        <div class="select--item">Select 5</div>
+                        <div class="select--item">Select 6</div>
+                      </div>
                     </div>
                   </div>
-                  <span>Цена</span>
-                  <div class="input-wrap">
-                    <input type="number" placeholder="50" />
-                  </div>
-                  <div class="input-wrap">
-                    <input type="number" placeholder="250000" />
+
+                  <div class="filters--selects-row">
+                    <div class="select">
+                      <div class="select--header">
+                        <span class="select--current">Select 6</span>
+                        <div class="select--icon">&#9660;</div>
+                      </div>
+
+                      <div class="select--body">
+                        <div class="select--item">Select 6</div>
+                        <div class="select--item">Select 7</div>
+                        <div class="select--item">Select 8</div>
+                      </div>
+                    </div>
+                    <span>Цена</span>
+                    <div class="input-wrap">
+                      <input type="number" placeholder="50" />
+                    </div>
+                    <div class="input-wrap">
+                      <input type="number" placeholder="250000" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -616,5 +722,73 @@
         </div>
       </div>
     </footer>
+    <div id="enter" class="popup">
+      <div class="popup--body">
+        <div class="popup--content">
+          <a href="#point" class="popup--close close-popup"></a>
+          <div class="popup--block">
+            <h2 class="popup--title">Вход в личный кабинет</h2>
+            <form action="#">
+              <span>Ваш email</span>
+              <input
+                type="email"
+                placeholder="mikel_ivanov98@gmail.com"
+                required
+              />
+              <span>Пароль</span>
+              <input type="password" placeholder="*************" required />
+              <div class="popup--checkbox-wrap">
+                <input type="checkbox" class="popup--checkbox" />
+                Запомнить меня
+              </div>
+              <div class="popup--links">
+                <a href="##">Забыли пароль?</a>
+                <a href="##">Регистрация</a>
+              </div>
+              <input type="submit" value="Войти в личный кабинет" />
+            </form>
+          </div>
+          <div class="popup--block">
+            <div class="popup--title">Войти с помощью</div>
+            <div class="popup--social">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+              </a>
+              <a href="#">
+                <i class="fab fa-google"></i>
+                <span>Google</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="recall" class="popup">
+      <div class="popup--body">
+        <div class="popup--content">
+          <a href="#point" class="popup--close close-popup"></a>
+          <div class="popup--block">
+            <h2>Перезвоните мне</h2>
+            <form action="#">
+              <span>Номер телефона</span>
+              <input
+                type="tel"
+                pattern="+380[0-9]{9}"
+                id="phone"
+                placeholder="+38(0__) ___ - __ - __"
+                required
+              />
+              <input type="submit" value="Перезвоните мне" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="point" class="hidden-point"></div>
   </body>
 </html>
