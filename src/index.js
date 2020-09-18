@@ -5,6 +5,13 @@ if (process.env.NODE_ENV === "development") {
   require("./index.html");
 }
 
+// <------ Burger START ------>
+$('.header--burger').on('click', function(event) {
+  $('.header--burger, .header--navs').toggleClass('active-nav');
+  $('body').toggleClass('lock');
+});
+// <------ Burger END ------>
+
 // <------ Custom select START ------>
 const select = () => {
   let selectHeader = document.querySelectorAll(".select--header");
