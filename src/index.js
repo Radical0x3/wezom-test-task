@@ -6,9 +6,9 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // <------ Burger START ------>
-$('.header--burger').on('click', function(event) {
-  $('.header--burger, .header--navs').toggleClass('active-nav');
-  $('body').toggleClass('lock');
+$(".header--burger").on("click", function (event) {
+  $(".header--burger, .header--navs").toggleClass("active-nav");
+  $("body").toggleClass("lock");
 });
 // <------ Burger END ------>
 
@@ -76,6 +76,12 @@ $(".select").on("click", function (e) {
   }
 });
 // <------ Selects change END ------>
+
+// <------ Top menu START ------>
+$(".menu--icon a").on("click", function () {
+  $(".menu-list").toggleClass("active");
+});
+// <------ Top menu END ------>
 
 // <------ Filter's tab change START ------>
 $(".filters--tabs-btn").on("click", function () {
@@ -205,3 +211,11 @@ function bodyUnlock() {
 }
 // <------ Popup END ------>
 
+$(".popup--checkbox").on("click", function () {
+  const button = $("#enter input[type='submit']");
+  if ($(this).is(":checked")) {
+    button.attr("disabled", false);
+  } else {
+    button.attr("disabled", true);
+  }
+});
