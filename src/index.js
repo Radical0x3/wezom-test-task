@@ -77,6 +77,15 @@ $(".select").on("click", function (e) {
 });
 // <------ Selects change END ------>
 
+// <------ Selects reset START ------>
+$(".filters--btns input[type='reset']").on("click", function () {
+  $(".filters--selects-row .select").each(function () {
+    let text = $(this).find(".select--item").eq(0).text();
+    $(this).find(".select--current").text(text);
+  });
+});
+// <------ Selects reset END ------>
+
 // <------ Top menu START ------>
 $(".menu--icon a").on("click", function () {
   $(".menu-list").toggleClass("active");
@@ -211,11 +220,16 @@ function bodyUnlock() {
 }
 // <------ Popup END ------>
 
-$(".popup--checkbox").on("click", function () {
+// <------ Popup btn enable START ------>
+$("#enter form").on("change", function () {
   const button = $("#enter input[type='submit']");
-  if ($(this).is(":checked")) {
+  if (
+    $("#enter input[type='email']").val() !== "" &&
+    $("#enter input[type='password']").val() !== ""
+  ) {
     button.attr("disabled", false);
   } else {
     button.attr("disabled", true);
   }
 });
+// <------ Popup btn enable END ------>
