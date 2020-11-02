@@ -328,6 +328,8 @@ body {
         text-transform: uppercase; }
         .main-section .row-1 .user-nav a:hover {
           text-decoration: underline; }
+        .main-section .row-1 .user-nav a:first-child .basket {
+          right: 27%; }
         .main-section .row-1 .user-nav a:nth-child(2) {
           margin: 0 27px; }
         .main-section .row-1 .user-nav a:nth-child(3) {
@@ -340,8 +342,10 @@ body {
           background-color: #ff8500;
           box-shadow: 0 5px 8px rgba(247, 129, 0, 0.7);
           position: absolute;
-          top: -20px;
-          right: 12px; }
+          top: -25px;
+          right: calc(30% - width / 2); }
+          .main-section .row-1 .user-nav a .basket.hide {
+            display: none; }
           .main-section .row-1 .user-nav a .basket span {
             font-size: 11px;
             color: #ffffff;
@@ -1164,6 +1168,8 @@ body {
         box-sizing: border-box;
         flex-wrap: wrap;
         justify-content: center; }
+        .footer .row-1 .block-1 form.error {
+          border: 1px solid red; }
         .footer .row-1 .block-1 form input {
           box-sizing: inherit;
           flex: 1.35;
@@ -1171,6 +1177,9 @@ body {
           font-size: 16px; }
           .footer .row-1 .block-1 form input[type="email"] {
             min-width: 300px; }
+          .footer .row-1 .block-1 form input:disabled {
+            background-color: #999;
+            cursor: default; }
         .footer .row-1 .block-1 form .subscribe-input {
           flex: 3;
           padding-left: 30px;
@@ -1191,7 +1200,7 @@ body {
           @media (max-width: 437px) {
             .footer .row-1 .block-1 form .subscribe-btn {
               margin-top: 10px; } }
-          .footer .row-1 .block-1 form .subscribe-btn:hover {
+          .footer .row-1 .block-1 form .subscribe-btn:not(:disabled):hover {
             background-color: #d46f00; }
     .footer .row-1 .links-block {
       display: flex;

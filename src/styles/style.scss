@@ -304,6 +304,11 @@ body {
         &:hover {
           text-decoration: underline;
         }
+        &:first-child {
+          .basket {
+            right: 27%;
+          }
+        }
         &:nth-child(2) {
           margin: 0 27px;
         }
@@ -320,8 +325,11 @@ body {
           background-color: #ff8500;
           box-shadow: 0 5px 8px rgba(247, 129, 0, 0.7);
           position: absolute;
-          top: -20px;
-          right: 12px;
+          top: -25px;
+          right: calc(30% - width / 2);
+          &.hide {
+            display: none;
+          }
           span {
             font-size: 11px;
             color: #ffffff;
@@ -1338,6 +1346,9 @@ body {
         box-sizing: border-box;
         flex-wrap: wrap;
         justify-content: center;
+        &.error {
+          border: 1px solid red;
+        }
         input {
           box-sizing: inherit;
           flex: 1.35;
@@ -1345,6 +1356,10 @@ body {
           font-size: 16px;
           &[type="email"] {
             min-width: 300px;
+          }
+          &:disabled {
+            background-color: #999;
+            cursor: default;
           }
         }
         .subscribe {
@@ -1369,7 +1384,7 @@ body {
             @media (max-width: 437px) {
               margin-top: 10px;
             }
-            &:hover {
+            &:not(:disabled):hover {
               background-color: #d46f00;
             }
           }

@@ -233,3 +233,106 @@ $("#enter form").on("change", function () {
   }
 });
 // <------ Popup btn enable END ------>
+
+// <------ Email check START ------>
+$(document).ready(function () {
+  let pattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,4})+$/;
+  let mail = $(".subscribe-input");
+  let mail_btn = $(".subscribe-btn");
+
+  mail.on("input", function (e) {
+    console.log(mail.val());
+    if (mail.val() !== " ") {
+      if (mail.val().search(pattern) == 0) {
+        mail.parent().removeClass("error");
+        mail_btn.attr("disabled", false);
+      } else {
+        mail.parent().addClass("error");
+        mail_btn.attr("disabled", true);
+      }
+    }
+  });
+  // <------ Email check END ------>
+
+  // <------ Hide empty navs START ------>
+  $(".basket").each(function () {
+    console.log($(this).text());
+    if ($(this).text() < 1) {
+      $(this).addClass("hide");
+    } else {
+      $(this).removeClass("hide");
+    }
+  });
+  // <------ Hide empty navs END ------>
+
+  // <------ Add to basket START ------>
+  let buy_btn = $(".products--row-btn");
+  buy_btn.on("click", function (e) {
+    e.preventDefault();
+    let basket = $(".basket span").eq(2);
+    let val = parseInt(basket.text()) + 1;
+    console.log(val);
+    $(basket).text(val);
+  });
+  // <------ Add to basket END ------>
+
+  // <------Add to favourites START ------>
+  let favourite_btn = $(".favourite-link");
+  favourite_btn.on("click", function (e) {
+    e.preventDefault();
+    let basket = $(".basket span").eq(1);
+    let val = parseInt(basket.text());
+
+    if ($(this).hasClass("selected")) {
+      val--;
+      $(this).removeClass("selected");
+      $(e.target).text("В избранное");
+    } else {
+      val++;
+      $(this).addClass("selected");
+      $(e.target).text("В избранном");
+    }
+
+    $(basket).text(val);
+    if (val < 1) {
+      if (!$(".basket").eq(1).hasClass("hide")) {
+        $(".basket").eq(1).addClass("hide");
+      }
+    } else {
+      if ($(".basket").eq(1).hasClass("hide")) {
+        $(".basket").eq(1).removeClass("hide");
+      }
+    }
+  });
+  // <------ Add to favourites END ------>
+
+  // <------Add to comparison START ------>
+  let comparison_btn = $(".compare-link");
+  comparison_btn.on("click", function (e) {
+    e.preventDefault();
+    let basket = $(".basket span").eq(0);
+    let val = parseInt(basket.text());
+
+    if ($(this).hasClass("selected")) {
+      val--;
+      $(this).removeClass("selected");
+      $(e.target).text("Сравнить товар");
+    } else {
+      val++;
+      $(this).addClass("selected");
+      $(e.target).text("В сравнении");
+    }
+
+    $(basket).text(val);
+    if (val < 1) {
+      if (!$(".basket").eq(0).hasClass("hide")) {
+        $(".basket").eq(0).addClass("hide");
+      }
+    } else {
+      if ($(".basket").eq(0).hasClass("hide")) {
+        $(".basket").eq(0).removeClass("hide");
+      }
+    }
+  });
+  // <------ Add to comparison END ------>
+});
